@@ -1,0 +1,100 @@
+<!-- Cusine: drop down 
+intolerances: multiselect drop down  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{page_title}}</title>
+</head>
+<style>body{font-family:sans-serif;} 
+    h1 {text-align: center;}
+    h3 {text-align: center;} 
+    body {text-align: center;} 
+    body {
+         background-color: rgb(171, 225, 192);
+      }</style>
+
+
+<body> 
+    <br> 
+    <h1> Hello Welcome to RecipeFinder!  </h1>
+    <h3> On this application you will be able to search for quick recipes that fit your taste and pantry </h3><br>
+    <br>
+<form action="gresponse" method="get">
+    <label for="ingredients">Please enter a comma seperated list of ingredients:</label>
+    <input type="text" id="ingredients" name="ingredients" /><br />
+    
+    <br>
+    
+    <label for="maxBudget">Please enter your maximum budget per serving:</label>
+    <input type="number" id="maxBudget" name="maxBudget" /><br />
+    <br>
+
+    <label for="cuisine">Please Select a Cuisine:</label>
+    <br>
+    <select id="cuisine" name="cuisine" size="10"
+        style="width: 150px;">
+    <option value="African">African</option>
+    <option value="American">American</option>
+    <option value="British">British</option>
+    <option value="Cajun">Cajun</option>
+    <option value="Caribbean">Caribbean</option>
+    <option value="Chinese">Chinese</option>
+    <option value="Eastern European">Eastern European</option>
+    <option value="European">European</option>
+    <option value="French">French</option>
+    <option value="German">German</option>
+    <option value="Indian">Indian</option>
+    <option value="Irish">Irish</option>
+    <option value="Italian">Italian</option>
+    <option value="Japanese">Japanese</option>
+    <option value="Jewish">Jewish</option>
+    <option value="Korean">Korean</option>
+    <option value="Latin American">Latin American</option>
+    <option value="Mediterranean">Mediterranean</option>
+    <option value="Mexican">Mexican</option>
+    <option value="Middle Eastern">Middle Eastern</option>
+    <option value="Nordic">Nordic</option>
+    <option value="Southern">Southern</option>
+    <option value="Spanish">Spanish</option>
+    <option value="Thai">Thai</option>
+    <option value="Vietnamese">Vietnamese</option>
+    </select>
+    <br>
+    <br>
+
+    <label for="intolerances">Please Select any Food Intolerances:</label>
+    <br>
+    <select id="intolerances" name="intolerances" size="10" multiple
+        style="width: 150px;">
+    <option value="Dairy">Dairy</option>
+    <option value="Egg">Egg</option>
+    <option value="Gluten">Gluten</option>
+    <option value="Grain">Grain</option>
+    <option value="Peanut">Peanut</option>
+    <option value="Seafood">Seafood</option>
+    <option value="Sesame">Sesame</option>
+    <option value="Shellfish">Shellfish</option>
+    <option value="Soy">Soy</option>
+    <option value="Sulfite">Sulfite</option>
+    <option value="Tree Nut">Tree Nut</option>
+    <option value="Wheat">Wheat</option>
+    </select>
+
+    <br>
+    <br>
+
+    <input type="submit" value="Find Recipes" name="gobtn" style="width: 100px;"/> 
+
+</form>
+
+    <br>
+
+    
+<!-- what does this do  -->
+
+{% if prompt %}
+<div class= 'formtitle'>{{prompt}}</div>
+{% endif %}
+</body>
+</html>

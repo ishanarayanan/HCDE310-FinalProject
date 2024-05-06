@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{page_title}}</title>
+</head>
+<style>body{font-family:sans-serif;} 
+    tr.user td{border-top: 10px #888 dashed;} 
+    
+	h1 {text-align: center;} 
+    body {text-align: center;} 
+    body {
+         background-color: rgb(171, 225, 192);
+      }</style>
+
+<body>
+    <h1> Here are your Recipes! </h3>
+	<table align ="center"
+	style="border:1px solid black">
+
+    {% for id in recipes %}
+    <tr>
+    <td><a href="{{recipes[id][2]}}"><img src="{{recipes[id][1]}}" width='200' height='200'></a></td>
+	
+	<td>{{recipes[id][0]}}</td>
+
+	</tr>
+    
+    {% endfor %}
+
+    </table>
+</body>
+</html>
